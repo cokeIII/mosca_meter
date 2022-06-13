@@ -9,8 +9,8 @@ var server = new mosca.Server(setting)
 server.on('ready', setup)
 
 function setup() {
-    server.authenticate = authenticate
-    console.log("mosca server is up and runing (auth)")
+    // server.authenticate = authenticate
+    // console.log("mosca server is up and runing (auth)")
 }
 
 var authenticate = function(client, username, password, callback) {
