@@ -1,7 +1,7 @@
 var mosca = require('mosca');
 require('dotenv').config();
 var settings = {
-    port: 1883,
+    port: 1884,
     http: {
         port: 8883
     }
