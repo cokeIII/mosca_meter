@@ -10,7 +10,7 @@ var server = new mosca.Server(settings); //สร้างตัวแปรม�
 server.on('ready', setup); //ใช้คำสั่ง ready,setup เพื่อตั้งค่า
 function setup() {
     // server.authenticate = authenticate; // ตั้งให้เซิพเวอร์ต้องมี Authen
-    // console.log('Mosca server is up and running (auth)')
+    console.log('Mosca server is up and running (auth)')
 }
 var authenticate = function(client, username, password, callback) {
     var authorized = (username === process.env.MQTT_USERNAME && password.toString() === process.env.MQTT_PASSWORD);
