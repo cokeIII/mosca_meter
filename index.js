@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var db_config = {
     host: 'localhost',
     user: 'root',
-    password: 'chontech2021!',
+    password: 'chontech2022!',
     database: 'ctc_meter'
 };
 
@@ -51,10 +51,10 @@ var settings = {
 app.get("/test", function(req, res) {
     console.log("READY")
 });
-var server = new mosca.Server(settings); //à¸ªà¸£à¹‰à¸²à¸‡à¸•à¸±à¸§à¹à¸›à¸£à¸¡à¸²à¸£à¸±à¸šà¸„à¹ˆà¸² server
-server.on('ready', setup); //à¹ƒà¸Šà¹‰à¸„à¸³à¸ªà¸±à¹ˆà¸‡ ready,setup à¹€à¸žà¸·à¹ˆà¸­à¸•à¸±à¹‰à¸‡à¸„à¹ˆà¸²
+var server = new mosca.Server(settings);
+server.on('ready', setup); 
 function setup() {
-    // server.authenticate = authenticate; // à¸•à¸±à¹‰à¸‡à¹ƒà¸«à¹‰à¹€à¸‹à¸´à¸žà¹€à¸§à¸­à¸£à¹Œà¸•à¹‰à¸­à¸‡à¸¡à¸µ Authen
+   
     console.log('Mosca server is up and running (auth)')
 }
 var authenticate = function(client, username, password, callback) {
