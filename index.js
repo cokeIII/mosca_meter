@@ -70,7 +70,7 @@ server.on('clientDisconnected', function(client) {
 });
 server.on('published', function(packet, client) {
     //console.log(packet);
-    //console.log('Published', packet.payload.toString());
+    console.log('Published', packet.payload.toString());
     const myArray = packet.payload.toString().substr(1, packet.payload.toString().length - 2).split(",");
     //console.log(myArray)
     if (packet.topic == "data_meter") {}
