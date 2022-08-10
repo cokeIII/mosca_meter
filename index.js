@@ -69,11 +69,14 @@ server.on('clientDisconnected', function(client) {
     console.log('Client Disconnected:', client.id);
 });
 server.on('published', function(packet, client) {
-    //console.log(packet);
+    console.log(packet);
     console.log('Published', packet.payload.toString());
     const myArray = packet.payload.toString().substr(1, packet.payload.toString().length - 2).split(",");
-    //console.log(myArray)
-    if (packet.topic == "data_meter") {}
+    console.log(myArray)
+    if (packet.topic == "data_meter" && myArray.length >= 56) {
+        insertData()
+        myArray = []
+    }
 });
 
 function insertData(myArray) {
