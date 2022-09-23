@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var db_config = {
     host: 'localhost',
     user: 'root',
-    password: 'chontech2022!',
+    password: '',
     database: 'ctc_meter'
 };
 
